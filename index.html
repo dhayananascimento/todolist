@@ -9,58 +9,71 @@
     <meta name="description" content="Lista de tarefas">
     <meta name="keywords" content="HTML, CSS, JavaScript, todoList">
 
+    <link rel="stylesheet" href="styles.css">
     <title>todoList</title>
 </head>
 <body>
 
-    <main>
-        <div>
+    <main class="container">
+        <div class="container-one">
             <form>
-                <label for="">Nome</label>
-                <input type="text" placeholder="Nome da Lista">
+                <label for="listName" class="container-titles">Nome</label>
+                <input id="listName" placeholder="Nome da Lista">
             </form>
             
-            <p>Cor de fundo</p>
+            <p class="container-titles">Cor de fundo</p>
         
-            <div>
-                <div>cor 1</div>
-                <div>cor 2</div>
-                <div>cor 3</div>
-                <div>cor 4</div>
+            <div class="container-colors">
+                <div style="background-color: #d96459"  class="colors selected"></div>
+                <div style="background-color: #f2ae72;"  class="colors"></div>
+                <div style="background-color: #588c7e;"  class="colors"></div>
+                <div style="background-color: #f2e394;"  class="colors"></div>
             </div>
             
             <button>Adicionar</button>
         </div>
-        <div>
+        <div class="container-two">
             <h2>Listas</h2>
             <div>
                 <div>
                     <h3>Nome da Lita</h3>
                     <div>
-                        <div>
-                            <input type="text" placeholder="nome do item">
+                        <div class="container-addItem">
+                            <input type="text" placeholder="item">
                             <button>Adicionar</button>
                         </div>
-                        <div>item </div>
-                        <div>item </div>
-                        <div>item </div>
+                        <div class="item">item </div>
+                        <div class="item">item </div>
+                        <div class="item">item </div>
                     </div>
                 </div>
                 <div>
                     <h3>Nome da Lita</h3>
                     <div>
-                        <div>
-                            <input type="text" placeholder="nome do item">
+                        <div class="container-addItem">
+                            <input type="text" placeholder="item">
                             <button>Adicionar</button>
                         </div>
-                        <div>item </div>
-                        <div>item </div>
-                        <div>item </div>
+                        <div class="item">item </div>
+                        <div class="item">item </div>
+                        <div class="item">item </div>
                     </div>
                 </div>
+                <div>
+                    <h3>Nome da Lita</h3>
+                    <div>
+                        <div class="container-addItem">
+                            <input type="text" placeholder="item">
+                            <button>Adicionar</button>
+                        </div>
+                        <div class="item">item </div>
+                        <div class="item">item </div>
+                        <div class="item">item </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </main>
-    
 </body>
 </html>
