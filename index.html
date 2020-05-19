@@ -7,7 +7,7 @@
 
     <meta name="author"content="Dhayana N. Silva">
     <meta name="description" content="Lista de tarefas">
-    <meta name="keywords" content="HTML, CSS, JavaScript, todoList">
+    <meta name="keywords" content="HTML, CSS, JavaScript, toDoList">
 
     <link rel="stylesheet" href="styles.css">
     <title>todoList</title>
@@ -17,27 +17,28 @@
     <main class="container">
         <div class="container-one">
             <form>
-                <label for="listName" class="container-titles">Nome</label>
+                <label for="listName" class="titles">Nome</label>
                 <input id="listName" placeholder="Nome da Lista">
             </form>
             
-            <p class="container-titles">Cor de fundo</p>
+            <p class="titles">Cor de fundo</p>
         
             <div class="container-colors">
-                <div style="background-color: #d96459"  class="colors selected"></div>
-                <div style="background-color: #f2ae72;"  class="colors"></div>
-                <div style="background-color: #588c7e;"  class="colors"></div>
-                <div style="background-color: #f2e394;"  class="colors"></div>
+                <div id="0" style="background-color: #d96459"   onclick="changeColor(this)" class="colors selected"></div>
+                <div id="1" style="background-color: #f2ae72;"  onclick="changeColor(this)" class="colors"></div>
+                <div id="2" style="background-color: #588c7e;"  onclick="changeColor(this)" class="colors"></div>
+                <div id="3" style="background-color: #f2e394;"  onclick="changeColor(this)" class="colors"></div>
             </div>
             
-            <button>Adicionar</button>
+            <button onclick="addList()">Adicionar</button>
         </div>
         <div class="container-two">
             <h2>Listas</h2>
-            <div>
-                <div>
+            
+            <div class="container-lists">
+                <!-- <div class="container-list">
                     <h3>Nome da Lita</h3>
-                    <div>
+                    <div class="container-itens">
                         <div class="container-addItem">
                             <input type="text" placeholder="item">
                             <button>Adicionar</button>
@@ -46,34 +47,10 @@
                         <div class="item">item </div>
                         <div class="item">item </div>
                     </div>
-                </div>
-                <div>
-                    <h3>Nome da Lita</h3>
-                    <div>
-                        <div class="container-addItem">
-                            <input type="text" placeholder="item">
-                            <button>Adicionar</button>
-                        </div>
-                        <div class="item">item </div>
-                        <div class="item">item </div>
-                        <div class="item">item </div>
-                    </div>
-                </div>
-                <div>
-                    <h3>Nome da Lita</h3>
-                    <div>
-                        <div class="container-addItem">
-                            <input type="text" placeholder="item">
-                            <button>Adicionar</button>
-                        </div>
-                        <div class="item">item </div>
-                        <div class="item">item </div>
-                        <div class="item">item </div>
-                    </div>
-                </div>
-                
+                </div>                 -->
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -48,6 +48,7 @@ h2 {
 h3 {
     color: #fff;
     height: 50px;
+    cursor: pointer;
     line-height: 50px;
     padding-left: 10px;
     background-color: lightblue;
@@ -65,6 +66,7 @@ h3 {
     height: 100%;
     padding: 10px;
     overflow-y: auto;
+    /* background-color:skyblue; */
     background-color: #e0e2e4;
     
     display: flex;
@@ -72,7 +74,7 @@ h3 {
     /* justify-content: center; */
 }
 
-.container-titles {
+.titles {
     font-size: 1.2em;
     margin-top: 10px;
 }
@@ -86,11 +88,12 @@ h3 {
     width: 35px;
     height: 35px;
     cursor: pointer;
+    border-radius: 50px;
     margin: 5px 10px 10px 0;
 }
 
 .colors:hover, .selected {
-    border-radius: 50px;
+    box-shadow: 1px 1px 10px #333;
 }
 
 
@@ -102,6 +105,19 @@ h3 {
     background-color: #fefefe;
 }
 
+.container-list {
+    margin-bottom: 10px;
+}
+
+.container-lists {
+    width: 100%;
+}
+
+.container-itens {
+    width: 100%;
+    display: none;
+}
+
 .container-addItem {
     display: flex;
 }
@@ -110,4 +126,8 @@ h3 {
     margin: 10px;
     padding: 10px;
     border: 1px solid #333;
+}
+
+.toggle {
+    display: block;
 }
