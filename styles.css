@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     outline: 0;
-    color: #333;
+    font-size: 1em;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
@@ -29,30 +29,25 @@ button {
     padding: 10px;
     cursor: pointer;
     margin-top: 5px;
-    background-color: #ccc;
+    background-color: #f8f8f1;
 }
 
 input {
-    margin-top: 5px;
-    padding: 5px;
     width: 100%; 
     height: 40px;
-    border: none
+    padding: 5px;
+    border: none;
+    margin-top: 5px;
+    background-color: #f8f8f1;
 }
 
 h2 {
+    font-size: 1.6em;
     text-align: center;
     margin-bottom: 10px;
 }
 
-h3 {
-    color: #fff;
-    height: 50px;
-    cursor: pointer;
-    line-height: 50px;
-    padding-left: 10px;
-    background-color: lightblue;
-}
+h3 { font-size: 1.3em; }
 
 
 .container {
@@ -66,15 +61,12 @@ h3 {
     height: 100%;
     padding: 10px;
     overflow-y: auto;
-    /* background-color:skyblue; */
-    background-color: #e0e2e4;
-    
+    background-color: #ddd;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
 }
 
-.titles {
+.container-one-titles {
     font-size: 1.2em;
     margin-top: 10px;
 }
@@ -102,18 +94,18 @@ h3 {
     height: 100%;
     padding: 10px;
     overflow-y: auto;
-    background-color: #fefefe;
-}
-
-.container-list {
-    margin-bottom: 10px;
+    background-color: #f8f8f1;
 }
 
 .container-lists {
     width: 100%;
 }
 
-.container-itens {
+.container-list {
+    margin-bottom: 10px;
+}
+
+.container-list-itens {
     width: 100%;
     display: none;
 }
@@ -122,9 +114,18 @@ h3 {
     display: flex;
 }
 
+.list-title {
+    height: 50px;
+    color: #fff;
+    cursor: pointer;
+    line-height: 50px;
+    padding-left: 10px;
+}
+
 .item {
     margin: 10px;
     padding: 10px;
+    color: #333;
     border: 1px solid #333;
 }
 

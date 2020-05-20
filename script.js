@@ -1,44 +1,61 @@
 const inputElement = document.querySelector("#listName");
 const listElement = document.querySelector(".container-lists");
-const itensElement = document.querySelector(".container-itens");
 const buttonsElement = document.querySelectorAll(".colors");
 
 let lists = [];
 
 const addList = () => {
-
+    let id = new Date();
     let name = (inputElement.value).trim();
-    let color = "pink";
+    let color = document.querySelector(".selected").style.backgroundColor;
 
-    if(name != "")
-        lists.push({ name, color, itens: [] })
+    if(name != "") 
+        lists.push({id, name, color, itens: [] })
     else 
         alert("Campo vazio!");  
-        
+
     inputElement.value = "";
     renderLists();
 }
 
-const addItem = () => {
+const addItem = (index, id, value) => {
+    lists[index].itens.push({
+        name: value,
+        completed: false
+    });
+    renderItens(index,id);
+}
 
+const renderItens = (index, id) => {
+    let containerElement = document.getElementById(`${id}`);
+    containerElement.innerHTML = "";
+    
+    lists[index].itens.forEach(element => {
+        let item = document.createElement("div");
+        item.innerText = element.name;
+        item.classList.add("item");     
+        containerElement.appendChild(item);
+    });
 }
 
 const renderLists = () => {
     listElement.innerHTML = "";
 
-    lists.forEach(element => {
-        
+    lists.forEach((element,index) => {   
         let container  = document.createElement("div");
         container.classList.add("container-list");
 
         let title = document.createElement("h3");
         title.innerText = element.name;
-        title.addEventListener("click", () => {
-            containerItens.classList.toggle("toggle");
-        })
+        title.classList.add("list-title");
+        title.style.backgroundColor = element.color;
+        title.addEventListener("click", () => containerListItens.classList.toggle("toggle"));
+
+        let containerListItens = document.createElement("div");
+        containerListItens.classList.add("container-list-itens");
 
         let containerItens = document.createElement("div");
-        containerItens.classList.add("container-itens");
+        containerItens.setAttribute("id", element.name+index);
         
         let containerAddItens = document.createElement("div");
         containerAddItens.classList.add("container-addItem");
@@ -48,21 +65,24 @@ const renderLists = () => {
 
         let button = document.createElement("button");
         button.textContent = "Adicionar";
-
+        button.addEventListener("click", () => {
+            addItem(index, containerItens.id,input.value);
+            input.value = "";
+        });
 
         containerAddItens.appendChild(input);
         containerAddItens.appendChild(button);
-
-        containerItens.appendChild(containerAddItens);
-
+        containerListItens.appendChild(containerAddItens);
+        containerListItens.appendChild(containerItens);
         container.appendChild(title);
-        container.appendChild(containerItens);
-
+        container.appendChild(containerListItens);
         listElement.appendChild(container);
+
+        renderItens(index, containerItens.id);
     });
 }
 
-const changeColor = (value) => {
+const changeColor = value => {
     buttonsElement.forEach(element => {
         if(element.id == value.id)
             element.classList.contains("selected")? null : element.classList.add("selected"); 
