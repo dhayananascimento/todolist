@@ -99,6 +99,8 @@ h3 { font-size: 1.3em; }
 
 .container-lists {
     width: 100%;
+    height: auto;
+    padding-bottom: 10px;
 }
 
 .container-list {
@@ -115,20 +117,43 @@ h3 { font-size: 1.3em; }
 }
 
 .list-title {
-    height: 50px;
     color: #fff;
     cursor: pointer;
-    line-height: 50px;
-    padding-left: 10px;
+    /* line-height: 35px; */
+    padding: 15px;
+    overflow-x: auto;
 }
 
 .item {
     margin: 10px;
-    padding: 10px;
+    padding: 5px;
     color: #333;
-    border: 1px solid #333;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .toggle {
     display: block;
+}
+
+.icons {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
 }
