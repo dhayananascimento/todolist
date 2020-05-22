@@ -31,6 +31,16 @@ const addItem = (index, id, value) => {
         alert("Campo vazio!"); 
 }
 
+const alertConfirmation = (index) => {
+    let response = confirm("Deseja realmente deletar esta lista?");
+
+    if (response){
+        lists.splice(index,1);
+        renderLists();
+    }
+
+}
+
 const renderItens = (index, id) => {
     let containerElement = document.getElementById(`${id}`);
     containerElement.innerHTML = "";
@@ -74,11 +84,20 @@ const renderLists = () => {
         let container = document.createElement("div");
         container.classList.add("container-list");
 
+        let containerTitle = document.createElement("div");
+        containerTitle.classList.add("list-title");
+        containerTitle.style.backgroundColor = element.color;
+        containerTitle.addEventListener("click", () => containerListItens.classList.toggle("toggle"));
+
         let title = document.createElement("h3");
         title.innerText = element.name;
-        title.classList.add("list-title");
-        title.style.backgroundColor = element.color;
-        title.addEventListener("click", () => containerListItens.classList.toggle("toggle"));
+
+        let iconTitle = document.createElement("div");
+        iconTitle.classList.add("icon-title");
+        iconTitle.innerText = ":";
+        iconTitle.addEventListener("click", () => {
+            alertConfirmation(index);
+        })
 
         let containerListItens = document.createElement("div");
         containerListItens.classList.add("container-list-itens");
@@ -91,6 +110,13 @@ const renderLists = () => {
 
         let input = document.createElement("input");
         input.placeholder = "Nome do Item";
+        input.addEventListener('keyup', (e) => {
+            if (e.keyCode === 13) {
+                addItem(index, containerItens.id,input.value);
+                input.value = "";
+            }
+
+        });
 
         let button = document.createElement("button");
         button.textContent = "Adicionar";
@@ -99,11 +125,14 @@ const renderLists = () => {
             input.value = "";
         });
 
+        
         containerAddItens.appendChild(input);
         containerAddItens.appendChild(button);
         containerListItens.appendChild(containerAddItens);
         containerListItens.appendChild(containerItens);
-        container.appendChild(title);
+        containerTitle.appendChild(title);
+        containerTitle.appendChild(iconTitle);
+        container.appendChild(containerTitle);
         container.appendChild(containerListItens);
         listElement.appendChild(container);
 
