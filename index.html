@@ -16,26 +16,25 @@
 
     <main class="container">
         <div class="container-one">
-            <form>
-                <label for="listName" class="container-one-titles">Nome</label>
-                <input id="listName" maxlength="35" placeholder="Nome da Lista">
-            </form>
+            <h1>Lista de tarefas</h1>
             
-            <p class="container-one-titles">Cor de fundo</p>
-        
-            <div class="container-colors">
+            <div class="list-name-container">
+                <label for="listName" class="titles">Nome:</label>
+                <input id="listName" maxlength="35" placeholder="Nome da Lista">
+                
+                <button class="btn-add-list" onclick="addList()">Adicionar</button>
+            </div>
+            
+            <div class="color-container">
+                <p class="titles">Cor de fundo:</p>
+                
                 <button id="0" style="background-color: #d96459;"  onclick="changeColor(this)" class="colors selected"></button>
                 <button id="1" style="background-color: #f2ae72;"  onclick="changeColor(this)" class="colors"></button>
                 <button id="2" style="background-color: #588c7e;"  onclick="changeColor(this)" class="colors"></button>
                 <button id="3" style="background-color: #f2e394;"  onclick="changeColor(this)" class="colors"></button>
-            </div>
-            
-            <button onclick="addList()">Adicionar</button>
+            </div>  
         </div>
-        <div class="container-two">
-            <h2>Listas</h2>     
-            <div class="container-lists"></div>
-        </div>
+        <div class="container-two"></div>
     </main>
     <script src="script.js"></script>
 </body>
