@@ -130,7 +130,7 @@ const renderLists = () => {
             itemContainer.classList.add("item-container")
     
             let input = document.createElement("input")
-            input.placeholder = "Nome do Item"
+            input.placeholder = "Nome do item"
             input.addEventListener('keyup', (e) => {
                 if (e.keyCode === 13) {
                     addTask(index, taskContainer.id, input.value)

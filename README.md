@@ -1,5 +1,5 @@
 # Lista de tarefas
-Este é um projeto com a finalidade de treinar habilidades relativas a linguagem **JavaScript**. O projeto consiste em uma lista de tarefas onde é possível inserir mais de uma lista e suas respectivas tarefas, que serão armazenadas localmente. Além disso, é possivel adicionar uma cor de fundo ao título da lista, marcar o item como concluído e removê-lo. Qualquer sugestão de melhoria será muito bem-vinda :)
+Este é um projeto com a finalidade de treinar habilidades relativas a linguagem **JavaScript**. O projeto consiste em uma lista de tarefas onde é possível inserir mais de uma lista e suas respectivas tarefas, que serão armazenadas localmente. Além disso, é possível adicionar uma cor de fundo ao título da lista, marcar o item como concluído e removê-lo. Qualquer sugestão de melhoria será muito bem-vinda :)
 
 ## Layout
 <img src="img.png" alt="imagem">
