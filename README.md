@@ -12,6 +12,6 @@ Este é um projeto com a finalidade de treinar habilidades relativas a linguagem
 ## Executar
 **Para executar este projeto na sua máquina, siga as instruções:**
 * execute o seguinte comando no seu terminal: 
-> $ git clone https://github.com/dhayananascimento/todoList.git
+> $ git clone https://github.com/dhayananascimento/todolist.git
 * abra a pasta que será  criada
 * abra o arquivo "index.html" com o navegador de sua preferência
